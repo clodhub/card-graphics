@@ -1,6 +1,6 @@
 {
   "name": "card-graphics",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "title": "Card graphics",
   "description": "Playing card faces, backs and empty slots with deal and flip animation, for web, Apple and Android.",
   "facilities": [
@@ -107,9 +107,9 @@
     "java": "26.0.1"
   },
   "platforms": [
-    "web",
+    "android",
     "apple",
-    "android"
+    "web"
   ],
   "text": {
     "purpose": "`card-graphics` draws a 52 card pack: a face with the rank over a small suit mark in two corners and either pips laid out as on a printed card (2 to 10), a large suit mark (ace) or, when the application supplies pictures, a court picture (jack, queen, king); a back (stripes, plain, or a picture); an empty slot; a card that arrives from the deck on a schedule; and a card that turns over. The rank is printed in the player's language through a function the application passes in (J is V in French). Sizes follow the card's width, 1.4 times taller than wide. The layout of pips, the schedule of a deal and the shape of a flip are pure data (`card-model`), the same on every platform.",
@@ -139,5 +139,254 @@
       }
     ],
     "notes": "Pure library; no provider limits apply."
+  },
+  "classes": [
+    {
+      "reference": {
+        "name": "ourapps-ae/card-graphics-class",
+        "version": "1.0.0",
+        "digest": "593ac75b25fc0c763df99a6a7be498240f4a0cb3dd6a35641c49c77331f42564"
+      },
+      "descriptor": {
+        "format": 1,
+        "name": "ourapps-ae/card-graphics-class",
+        "version": "1.0.0",
+        "provides": [
+          {
+            "type": "ae/card-graphics",
+            "version": "1.0.0",
+            "path": "classes/card-graphics-class/card-graphics.json",
+            "modules": {
+              "web": [
+                "web/index.ts"
+              ],
+              "android": [
+                "android/src/main/java"
+              ],
+              "ios": [
+                "apple/Sources"
+              ],
+              "macos": [
+                "apple/Sources"
+              ],
+              "tvos": [
+                "apple/Sources"
+              ],
+              "windows": [
+                "web/index.ts"
+              ]
+            }
+          }
+        ],
+        "requires": [
+          {
+            "type": "ae/theme",
+            "version": "1.0.0"
+          }
+        ],
+        "settings": {
+          "type": "object",
+          "properties": {
+            "backStyle": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_]{0,63}$"
+            },
+            "cardWidth": {
+              "type": "integer"
+            },
+            "cornerStyle": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_]{0,63}$"
+            }
+          },
+          "required": [
+            "backStyle",
+            "cardWidth",
+            "cornerStyle"
+          ],
+          "additionalProperties": false
+        },
+        "inventory": [
+          {
+            "path": "classes/card-graphics-class/card-graphics.json",
+            "digest": "fe3ce396e10ca26ed43d7b8142eaecc464be240fc9aca64e4d36df3271e88484"
+          },
+          {
+            "path": "classes/card-graphics-class/check.mjs",
+            "digest": "463aca425e5e8a0a4b19729102bfebccc612b0e88e9019b333277c08969e2cbc"
+          },
+          {
+            "path": "classes/card-graphics-class/runtime.mjs",
+            "digest": "7440f3891614c423f74668cb5a2445fea58bbfa4d7c740c8e8a855d1d9300d43"
+          }
+        ],
+        "verification": [
+          {
+            "id": "shared",
+            "root": "package",
+            "argv": [
+              "node",
+              "classes/card-graphics-class/check.mjs"
+            ],
+            "cwd": ".",
+            "prepare": [],
+            "tools": {
+              "node": "26.5"
+            },
+            "fixtures": [
+              "classes/card-graphics-class/check.mjs"
+            ],
+            "locks": [],
+            "network": false,
+            "timeoutSeconds": 60,
+            "expectedExit": 0,
+            "scope": "required-local",
+            "requirements": []
+          }
+        ]
+      }
+    }
+  ],
+  "implements": [
+    {
+      "name": "ourapps-ae/card-graphics-class",
+      "version": "1.0.0",
+      "digest": "593ac75b25fc0c763df99a6a7be498240f4a0cb3dd6a35641c49c77331f42564"
+    }
+  ],
+  "upstream": [],
+  "compatibility": {
+    "runtimes": {
+      "node": ">=26.5.0 <27.0.0",
+      "swift": "=6.4.2",
+      "ios": ">=17.0.0",
+      "macos": ">=14.0.0",
+      "tvos": ">=17.0.0",
+      "kotlin": "=2.3.20",
+      "java": ">=17.0.0 <27.0.0",
+      "android": ">=8.0.0"
+    },
+    "frameworks": {
+      "android-ui": {
+        "name": "androidx.compose.ui",
+        "range": "=1.10.0"
+      }
+    },
+    "dependencies": [
+      {
+        "name": "pkg:maven/androidx.compose.ui/ui",
+        "version": "1.10.0",
+        "isolation": "shared"
+      },
+      {
+        "name": "pkg:maven/androidx.compose.material3/material3",
+        "version": "1.4.0",
+        "isolation": "shared"
+      }
+    ],
+    "styles": {
+      "scope": "global",
+      "namespaces": [
+        ".card-flip.flipping::animation",
+        ".card-flip::display",
+        ".card-flip::perspective",
+        ".card.back.art::background-position",
+        ".card.back.art::background-size",
+        ".card.back.art::border",
+        ".card.back.plain::background",
+        ".card.back::background",
+        ".card.back::border",
+        ".card.dealing::animation-fill-mode",
+        ".card.dealing::animation-name",
+        ".card.dealing::animation-timing-function",
+        ".card.dim::opacity",
+        ".card.face .box .court::background-position",
+        ".card.face .box .court::background-size",
+        ".card.face .box .court::inset",
+        ".card.face .box .court::position",
+        ".card.face .box .p.ace::font-size",
+        ".card.face .box .p.ace::left",
+        ".card.face .box .p.ace::top",
+        ".card.face .box .p.flip::transform",
+        ".card.face .box .p.small::font-size",
+        ".card.face .box .p::font-size",
+        ".card.face .box .p::line-height",
+        ".card.face .box .p::position",
+        ".card.face .box .p::transform",
+        ".card.face .box.court::height",
+        ".card.face .box.court::left",
+        ".card.face .box.court::top",
+        ".card.face .box.court::width",
+        ".card.face .box::border",
+        ".card.face .box::border-radius",
+        ".card.face .box::height",
+        ".card.face .box::left",
+        ".card.face .box::position",
+        ".card.face .box::top",
+        ".card.face .box::width",
+        ".card.face .index .pip::font-size",
+        ".card.face .index .pip::margin-top",
+        ".card.face .index .rank.ten::font-stretch",
+        ".card.face .index .rank.ten::letter-spacing",
+        ".card.face .index .rank::font-size",
+        ".card.face .index .rank::font-weight",
+        ".card.face .index .rank::white-space",
+        ".card.face .index.br::bottom",
+        ".card.face .index.br::right",
+        ".card.face .index.br::transform",
+        ".card.face .index.tl::left",
+        ".card.face .index.tl::top",
+        ".card.face .index::align-items",
+        ".card.face .index::display",
+        ".card.face .index::flex-direction",
+        ".card.face .index::line-height",
+        ".card.face .index::position",
+        ".card.face .index::width",
+        ".card.face .index::z-index",
+        ".card.face.red::color",
+        ".card.face::background",
+        ".card.face::color",
+        ".card.slot::border",
+        ".card.slot::box-shadow",
+        ".card.tappable::cursor",
+        ".card::border-radius",
+        ".card::box-shadow",
+        ".card::flex",
+        ".card::overflow",
+        ".card::position",
+        ".card::user-select",
+        "@keyframes deal-in",
+        "@keyframes flip-over"
+      ],
+      "conflicts": []
+    }
+  },
+  "maintenance": {
+    "owners": [
+      "Level N Ltd"
+    ],
+    "contact": "https://github.com/ourapps-ae/card-graphics/issues",
+    "repository": "https://github.com/ourapps-ae/card-graphics",
+    "updates": {
+      "source": "https://github.com/ourapps-ae/card-graphics/releases",
+      "strategy": "manual"
+    }
+  },
+  "supportedPlatforms": [
+    "android",
+    "ios",
+    "macos",
+    "tvos",
+    "web",
+    "windows"
+  ],
+  "licence": "Apache-2.0",
+  "licenceFile": "LICENCE",
+  "noticeFile": "NOTICE",
+  "templates": [],
+  "modules": {
+    "web": "web/index.ts",
+    "android": "android/src/main/java",
+    "apple": "apple/Sources"
   }
 }
