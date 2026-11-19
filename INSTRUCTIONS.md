@@ -3,7 +3,7 @@
 ## For the agent
 Select `ourapps-ae/card-graphics`; connect `theme` to the theme component. Set `backStyle`, `cornerStyle` and `cardWidth` from the recipe's look answer only if the user asked for something other than the defaults. Rank labels come from the `translations` component (keys the recipe defines); do not add strings here.
 
-- Select package `ourapps-ae/card-graphics` version `0.7.0`.
+- Select package `ourapps-ae/card-graphics` version `0.8.0`.
 - Settings to configure:
   - `backStyle` (string, identifier; optional; default `stripes`)
   - `cornerStyle` (string, identifier; optional; default `rounded`)
@@ -19,6 +19,6 @@ Supply card pictures (optional) named `card-back-<theme>.png` and `card-<theme>-
 From the component directory:
 
 - `node --test tests/web.test.ts` (web, required-local; tools: node 26.5)
-- `python3 tests/native.py apple` (apple, platform; tools: python3 3.12, swiftc 6.4)
+- `python3 tests/native.py apple` (apple, platform; tools: python3 3.12, swiftc 6.4, xcrun 72)
 - `python3 tests/native.py android` (android, platform; tools: python3 3.12, kotlinc 2.2, java 26.0)
 - `python3 -m aepm review <digest> --store STORE --policy POLICY --trusted --allow-network` checks an archive fetched with `python3 -m aepm fetch ourapps-ae/card-graphics@VERSION --store STORE --from https://ourapps.app` and runs its suites.
