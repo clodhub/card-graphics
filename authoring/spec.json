@@ -1,6 +1,6 @@
 {
   "name": "card-graphics",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "title": "Card graphics",
   "description": "Playing card faces, backs and empty slots with deal and flip animation, for web, Apple and Android.",
   "facilities": [
@@ -149,13 +149,17 @@
     {
       "reference": {
         "name": "ourapps-ae/card-graphics-class",
-        "version": "1.0.0",
-        "digest": "593ac75b25fc0c763df99a6a7be498240f4a0cb3dd6a35641c49c77331f42564"
+        "version": "1.1.0",
+        "digest": "3baca95460fab41c86d8f2bdf9017073dcba5f0e46923a716572b75d7cdaf295"
       },
       "descriptor": {
-        "format": 1,
+        "format": 2,
         "name": "ourapps-ae/card-graphics-class",
-        "version": "1.0.0",
+        "version": "1.1.0",
+        "title": "Card graphics",
+        "summary": "Card faces, backs, slots, dealing and flipping",
+        "category": "games/cards",
+        "presentation": "visual",
         "provides": [
           {
             "type": "ae/card-graphics",
@@ -255,8 +259,8 @@
   "implements": [
     {
       "name": "ourapps-ae/card-graphics-class",
-      "version": "1.0.0",
-      "digest": "593ac75b25fc0c763df99a6a7be498240f4a0cb3dd6a35641c49c77331f42564"
+      "version": "1.1.0",
+      "digest": "3baca95460fab41c86d8f2bdf9017073dcba5f0e46923a716572b75d7cdaf295"
     }
   ],
   "upstream": [],
@@ -267,7 +271,7 @@
       "ios": ">=17.0.0",
       "macos": ">=14.0.0",
       "tvos": ">=17.0.0",
-      "kotlin": "=2.3.20",
+      "kotlin": "=2.4.21",
       "java": ">=17.0.0 <27.0.0",
       "android": ">=8.0.0"
     },
@@ -601,5 +605,40 @@
         "manual": "Without the package manager, install Node 26 from nodejs.org (the installer, or the zip or tar archive with its folder put first on PATH); on Linux also from the NodeSource repository."
       }
     ]
-  }
+  },
+  "release": {
+    "channel": "features",
+    "fixes": []
+  },
+  "images": [
+    {
+      "caption": "Faces, striped backs and empty board slots in the night look",
+      "height": 480,
+      "path": "images/hand-night.png",
+      "platform": "web",
+      "width": 960
+    },
+    {
+      "caption": "The same cards with plain backs in the lounge look",
+      "height": 480,
+      "path": "images/hand-lounge.png",
+      "platform": "web",
+      "width": 960
+    },
+    {
+      "caption": "Rounded, soft and square corners at three widths",
+      "height": 520,
+      "path": "images/corners-and-sizes.png",
+      "platform": "web",
+      "width": 960
+    },
+    {
+      "caption": "Ranks from ace to two in all four suits, with dimmed cards that cannot be played",
+      "height": 560,
+      "path": "images/every-rank.png",
+      "platform": "web",
+      "width": 1200
+    }
+  ],
+  "vulnerabilityWaivers": []
 }
