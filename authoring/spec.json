@@ -1,6 +1,6 @@
 {
   "name": "card-graphics",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "title": "Card graphics",
   "description": "Playing card faces, backs and empty slots with deal and flip animation, for web, Apple and Android.",
   "facilities": [
@@ -62,7 +62,7 @@
       ],
       "scope": "required-local",
       "tools": {
-        "node": "26.5.0"
+        "node": "26.5"
       }
     },
     {
@@ -81,8 +81,8 @@
         "tests/apple/theme/ThemeTypes.swift"
       ],
       "tools": {
-        "python3": "3.12.8",
-        "swiftc": "6.4.2",
+        "python3": "3.12",
+        "swiftc": "6.4",
         "xcrun": "72"
       }
     },
@@ -98,18 +98,19 @@
         "tests/android/Main.kt"
       ],
       "tools": {
-        "python3": "3.12.8",
-        "kotlinc": "2.2.0",
-        "java": "26.0.1"
+        "java": "26.0",
+        "kotlinc": "2.2",
+        "python3": "3.12"
       }
     }
   ],
   "tools": {
-    "node": "26.5.0",
-    "python3": "3.12.8",
-    "swiftc": "6.4.2",
-    "kotlinc": "2.2.0",
-    "java": "26.0.1"
+    "node": "26.5",
+    "python3": "3.12",
+    "swiftc": "6.4",
+    "xcrun": "72",
+    "kotlinc": "2.2",
+    "java": "26.0"
   },
   "platforms": [
     "android",
@@ -125,7 +126,7 @@
     "scenarios": "A table draws five community cards, some as empty slots; a deal sends two cards to each seat one after another from the deck's position; a showdown turns a seat's cards over; a French player sees V, D, R for jack, queen, king; a recipe with its own artwork passes `artFor` and gets pictured backs and courts, while one without gets the code-drawn cards.",
     "updates": "Patch updates replace files only. The component keeps no data; removal deletes its files and the application's imports of them."
   },
-  "agentInstructions": "Select `ourapps-ae/card-graphics`; connect `theme` to the theme component. Set `backStyle`, `cornerStyle` and `cardWidth` from the recipe's look answer only if the user asked for something other than the defaults. Rank labels come from the `translations` component (keys the recipe defines); do not add strings here.",
+  "agentInstructions": "Select `clodhub/card-graphics`; connect `theme` to the theme component. Set `backStyle`, `cornerStyle` and `cardWidth` from the recipe's look answer only if the user asked for something other than the defaults. Rank labels come from the `translations` component (keys the recipe defines); do not add strings here.",
   "developerInstructions": "Supply card pictures (optional) named `card-back-<theme>.png` and `card-<theme>-jack|queen|king.png` and an `artFor` that finds them. Supply `rankLabel` if the application is translated. Keep `card-model` the single source of truth: change pip layouts there, regenerate fixtures with `node tests/make-fixtures.ts`, and update the Swift and Kotlin models to match.",
   "suitability": {
     "format": 1,
@@ -148,13 +149,13 @@
   "classes": [
     {
       "reference": {
-        "name": "ourapps-ae/card-graphics-class",
+        "name": "clodhub/card-graphics-class",
         "version": "1.1.0",
-        "digest": "3baca95460fab41c86d8f2bdf9017073dcba5f0e46923a716572b75d7cdaf295"
+        "digest": "179147b981fb2e22b0e6a4583d9a4e7fe87c856ac509c887bbc6956be04a8bdc"
       },
       "descriptor": {
         "format": 2,
-        "name": "ourapps-ae/card-graphics-class",
+        "name": "clodhub/card-graphics-class",
         "version": "1.1.0",
         "title": "Card graphics",
         "summary": "Card faces, backs, slots, dealing and flipping",
@@ -218,7 +219,7 @@
         "inventory": [
           {
             "path": "classes/card-graphics-class/card-graphics.json",
-            "digest": "fe3ce396e10ca26ed43d7b8142eaecc464be240fc9aca64e4d36df3271e88484"
+            "digest": "71be60fc3edbc0197a12d3a3f7153ef10e39c92b52fbf1977101307a6bf2ac08"
           },
           {
             "path": "classes/card-graphics-class/check.mjs",
@@ -258,9 +259,9 @@
   ],
   "implements": [
     {
-      "name": "ourapps-ae/card-graphics-class",
+      "name": "clodhub/card-graphics-class",
       "version": "1.1.0",
-      "digest": "3baca95460fab41c86d8f2bdf9017073dcba5f0e46923a716572b75d7cdaf295"
+      "digest": "179147b981fb2e22b0e6a4583d9a4e7fe87c856ac509c887bbc6956be04a8bdc"
     }
   ],
   "upstream": [],
@@ -374,10 +375,10 @@
     "owners": [
       "Level N Ltd"
     ],
-    "contact": "https://github.com/ourapps-ae/card-graphics/issues",
-    "repository": "https://github.com/ourapps-ae/card-graphics",
+    "contact": "https://github.com/clodhub/card-graphics/issues",
+    "repository": "https://github.com/clodhub/card-graphics",
     "updates": {
-      "source": "https://github.com/ourapps-ae/card-graphics/releases",
+      "source": "https://github.com/clodhub/card-graphics/releases",
       "strategy": "manual"
     }
   },

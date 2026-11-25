@@ -7,12 +7,12 @@
   "focus": "component",
   "definitions": [
     {
-      "id": "ourapps-ae.card-graphics",
+      "id": "clodhub.card-graphics",
       "name": "Card graphics",
       "kind": "component",
       "status": "example",
-      "package": "ourapps-ae/card-graphics",
-      "version": "0.9.0",
+      "package": "clodhub/card-graphics",
+      "version": "0.10.0",
       "ports": [
         {
           "id": "theme",
@@ -93,7 +93,7 @@
     {
       "id": "component",
       "name": "Card graphics",
-      "definition": "ourapps-ae.card-graphics",
+      "definition": "clodhub.card-graphics",
       "configuration": {}
     },
     {
