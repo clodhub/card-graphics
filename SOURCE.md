@@ -15,8 +15,8 @@ Reference revision: `19905b75dbea89fbfd424d67fe26c81aaed0e018`. Extracted from t
 
 ## Android
 
-- `implementation/android/src/main/java/ae/cards/CardModel.kt` <- `android/app/src/main/java/app/ourapps/ourpoker/ui/Cards.kt:48-80` (glyphs, court names, pips), as the Swift model.
-- `implementation/android/src/main/java/ae/cards/PlayingCard.kt` <- `ui/Cards.kt:82-175` (`PlayingCard`, `CornerIndex`, `CardSlot`). `CardFace`, `CardRed`, `Ink` constants, `artPainter` resource lookups (`getIdentifier`) and `rankText` became `CardStyle`. `DealtCard`, `FlippingCard` are new (`generated-platform`). Left behind: `LegendLine`, `Logo` and `pulseHalo` (`Cards.kt:165-191`, the last is in `controls`).
+- `implementation/android/src/main/java/com/clodhub/cards/CardModel.kt` <- `android/app/src/main/java/app/ourapps/ourpoker/ui/Cards.kt:48-80` (glyphs, court names, pips), as the Swift model.
+- `implementation/android/src/main/java/com/clodhub/cards/PlayingCard.kt` <- `ui/Cards.kt:82-175` (`PlayingCard`, `CornerIndex`, `CardSlot`). `CardFace`, `CardRed`, `Ink` constants, `artPainter` resource lookups (`getIdentifier`) and `rankText` became `CardStyle`. `DealtCard`, `FlippingCard` are new (`generated-platform`). Left behind: `LegendLine`, `Logo` and `pulseHalo` (`Cards.kt:165-191`, the last is in `controls`).
 
 ## Tests
 

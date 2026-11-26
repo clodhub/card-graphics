@@ -1,6 +1,7 @@
 {
   "name": "card-graphics",
-  "version": "0.10.0",
+  "version": "0.11.0",
+  "sourceRevision": "19905b75dbea89fbfd424d67fe26c81aaed0e018",
   "title": "Card graphics",
   "description": "Playing card faces, backs and empty slots with deal and flip animation, for web, Apple and Android.",
   "facilities": [
@@ -12,7 +13,7 @@
   "provides": [
     {
       "id": "card-graphics",
-      "type": "ae/card-graphics",
+      "type": "com.clodhub/card-graphics",
       "version": "1.0.0",
       "path": "interfaces/card-graphics.json"
     }
@@ -20,7 +21,7 @@
   "requires": [
     {
       "id": "theme",
-      "type": "ae/theme",
+      "type": "com.clodhub/theme",
       "version": "1.0.0",
       "path": "interfaces/required-theme.json"
     }
@@ -126,7 +127,7 @@
     "scenarios": "A table draws five community cards, some as empty slots; a deal sends two cards to each seat one after another from the deck's position; a showdown turns a seat's cards over; a French player sees V, D, R for jack, queen, king; a recipe with its own artwork passes `artFor` and gets pictured backs and courts, while one without gets the code-drawn cards.",
     "updates": "Patch updates replace files only. The component keeps no data; removal deletes its files and the application's imports of them."
   },
-  "agentInstructions": "Select `clodhub/card-graphics`; connect `theme` to the theme component. Set `backStyle`, `cornerStyle` and `cardWidth` from the recipe's look answer only if the user asked for something other than the defaults. Rank labels come from the `translations` component (keys the recipe defines); do not add strings here.",
+  "agentInstructions": "Select `pkg:clod/com.clodhub/card-graphics`; connect `theme` to the theme component. Set `backStyle`, `cornerStyle` and `cardWidth` from the recipe's look answer only if the user asked for something other than the defaults. Rank labels come from the `translations` component (keys the recipe defines); do not add strings here.",
   "developerInstructions": "Supply card pictures (optional) named `card-back-<theme>.png` and `card-<theme>-jack|queen|king.png` and an `artFor` that finds them. Supply `rankLabel` if the application is translated. Keep `card-model` the single source of truth: change pip layouts there, regenerate fixtures with `node tests/make-fixtures.ts`, and update the Swift and Kotlin models to match.",
   "suitability": {
     "format": 1,
@@ -149,13 +150,13 @@
   "classes": [
     {
       "reference": {
-        "name": "clodhub/card-graphics-class",
+        "name": "pkg:clod/com.clodhub/card-graphics-class",
         "version": "1.1.0",
-        "digest": "179147b981fb2e22b0e6a4583d9a4e7fe87c856ac509c887bbc6956be04a8bdc"
+        "digest": "e241c04c17db4b4e097d269b595f599fe558f795a98b62d583838190e503852b"
       },
       "descriptor": {
-        "format": 2,
-        "name": "clodhub/card-graphics-class",
+        "format": 3,
+        "name": "pkg:clod/com.clodhub/card-graphics-class",
         "version": "1.1.0",
         "title": "Card graphics",
         "summary": "Card faces, backs, slots, dealing and flipping",
@@ -163,7 +164,7 @@
         "presentation": "visual",
         "provides": [
           {
-            "type": "ae/card-graphics",
+            "type": "com.clodhub/card-graphics",
             "version": "1.0.0",
             "path": "classes/card-graphics-class/card-graphics.json",
             "modules": {
@@ -190,7 +191,7 @@
         ],
         "requires": [
           {
-            "type": "ae/theme",
+            "type": "com.clodhub/theme",
             "version": "1.0.0"
           }
         ],
@@ -219,7 +220,7 @@
         "inventory": [
           {
             "path": "classes/card-graphics-class/card-graphics.json",
-            "digest": "71be60fc3edbc0197a12d3a3f7153ef10e39c92b52fbf1977101307a6bf2ac08"
+            "digest": "0ab7f42eee224f3025b4a096f8ec491a065275ff65443ef706356e622c23b04d"
           },
           {
             "path": "classes/card-graphics-class/check.mjs",
@@ -227,7 +228,7 @@
           },
           {
             "path": "classes/card-graphics-class/runtime.mjs",
-            "digest": "7440f3891614c423f74668cb5a2445fea58bbfa4d7c740c8e8a855d1d9300d43"
+            "digest": "1d85f0dae92d5c6c859cd48a4211a933718ae3e168554a2b00806183c4b661f0"
           }
         ],
         "verification": [
@@ -259,9 +260,9 @@
   ],
   "implements": [
     {
-      "name": "clodhub/card-graphics-class",
+      "name": "pkg:clod/com.clodhub/card-graphics-class",
       "version": "1.1.0",
-      "digest": "179147b981fb2e22b0e6a4583d9a4e7fe87c856ac509c887bbc6956be04a8bdc"
+      "digest": "e241c04c17db4b4e097d269b595f599fe558f795a98b62d583838190e503852b"
     }
   ],
   "upstream": [],

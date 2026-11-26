@@ -1,15 +1,15 @@
 # Card graphics instructions
 
 ## For the agent
-Select `clodhub/card-graphics`; connect `theme` to the theme component. Set `backStyle`, `cornerStyle` and `cardWidth` from the recipe's look answer only if the user asked for something other than the defaults. Rank labels come from the `translations` component (keys the recipe defines); do not add strings here.
+Select `pkg:clod/com.clodhub/card-graphics`; connect `theme` to the theme component. Set `backStyle`, `cornerStyle` and `cardWidth` from the recipe's look answer only if the user asked for something other than the defaults. Rank labels come from the `translations` component (keys the recipe defines); do not add strings here.
 
-- Select package `clodhub/card-graphics` version `0.10.0`.
+- Select package `pkg:clod/com.clodhub/card-graphics` version `0.11.0`.
 - Settings to configure:
   - `backStyle` (string, identifier; optional; default `stripes`)
   - `cornerStyle` (string, identifier; optional; default `rounded`)
   - `cardWidth` (integer; optional; default `56`)
-- Connect the provided `card-graphics` (ae/card-graphics 1.0.0, OpenRPC 1.3.2 document `interfaces/card-graphics.json`) to the consumer that needs it.
-- Supply `theme` (ae/theme 1.0.0) from the component that provides it.
+- Connect the provided `card-graphics` (com.clodhub/card-graphics 1.0.0, OpenRPC 1.3.2 document `interfaces/card-graphics.json`) to the consumer that needs it.
+- Supply `theme` (com.clodhub/theme 1.0.0) from the component that provides it.
 - No accounts or keys are needed.
 
 ## For the developer
@@ -21,4 +21,4 @@ From the component directory:
 - `node --test tests/web.test.ts` (web, required-local; tools: node 26.5)
 - `python3 tests/native.py apple` (apple, platform; tools: python3 3.12, swiftc 6.4, xcrun 72)
 - `python3 tests/native.py android` (android, platform; tools: python3 3.12, kotlinc 2.2, java 26.0)
-- `python3 -m aepm review <digest> --store STORE --policy POLICY --trusted --allow-network` checks an archive fetched with `python3 -m aepm fetch clodhub/card-graphics@VERSION --store STORE --from https://clodhub.com` and runs its suites.
+- `python3 -m clod review <digest> --store STORE --policy POLICY --trusted --allow-network` checks an archive fetched with `python3 -m clod fetch card-graphics@VERSION --store STORE --from https://clodhub.com` and runs its suites.

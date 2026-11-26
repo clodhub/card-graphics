@@ -1,5 +1,5 @@
 # card-graphics ownership
 
 Repository: https://github.com/clodhub/card-graphics.git.
-Current code: `implementation/android/src/main/java/ae/cards/CardModel.kt`, `implementation/android/src/main/java/ae/cards/PlayingCard.kt`, `implementation/apple/Sources/CardModel.swift`, `implementation/apple/Sources/PlayingCard.swift`, `implementation/web/card-model.ts`, `implementation/web/cards.css`, `implementation/web/cards.ts`.
+Current code: `implementation/android/src/main/java/com/clodhub/cards/CardModel.kt`, `implementation/android/src/main/java/com/clodhub/cards/PlayingCard.kt`, `implementation/apple/Sources/CardModel.swift`, `implementation/apple/Sources/PlayingCard.swift`, `implementation/web/card-model.ts`, `implementation/web/cards.css`, `implementation/web/cards.ts`.
 `component.json`, `tools.lock.json` and `visual/` are generated from `authoring/spec.json`; edit the spec, not the generated files. `CONTRACT.md`, `INSTRUCTIONS.md` and `SOURCE.md` are hand-written and kept on regeneration.

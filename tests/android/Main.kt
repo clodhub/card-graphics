@@ -1,4 +1,4 @@
-import ae.cards.*
+import com.clodhub.cards.*
 import kotlin.math.abs
 
 // Mirrors tests/apple/main.swift: faces are compared with rows the TypeScript produced (Expected.kt).

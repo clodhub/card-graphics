@@ -1,17 +1,17 @@
 {
-  "id": "clodhub.card-graphics",
+  "id": "com.clodhub.card-graphics",
   "name": "Card graphics",
   "kind": "component",
   "status": "example",
-  "package": "clodhub/card-graphics",
-  "version": "0.10.0",
+  "package": "pkg:clod/com.clodhub/card-graphics",
+  "version": "0.11.0",
   "ports": [
     {
       "id": "theme",
       "name": "Theme",
       "direction": "input",
       "kind": "interface",
-      "type": "ae/theme",
+      "type": "com.clodhub/theme",
       "version": "1.0.0",
       "required": true,
       "cardinality": "one"
@@ -21,7 +21,7 @@
       "name": "Card graphics",
       "direction": "output",
       "kind": "interface",
-      "type": "ae/card-graphics",
+      "type": "com.clodhub/card-graphics",
       "version": "1.0.0"
     }
   ],

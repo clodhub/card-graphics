@@ -15,8 +15,8 @@ Facilities: `card-graphics` (Card faces, backs, slots, dealing and flipping).
 ## Artefacts and dependencies
 `component.json` maps every `implementation/` source into `components/card-graphics/`:
 
-- `implementation/android/src/main/java/ae/cards/CardModel.kt` -> `components/card-graphics/android/src/main/java/ae/cards/CardModel.kt`
-- `implementation/android/src/main/java/ae/cards/PlayingCard.kt` -> `components/card-graphics/android/src/main/java/ae/cards/PlayingCard.kt`
+- `implementation/android/src/main/java/com/clodhub/cards/CardModel.kt` -> `components/card-graphics/android/src/main/java/com/clodhub/cards/CardModel.kt`
+- `implementation/android/src/main/java/com/clodhub/cards/PlayingCard.kt` -> `components/card-graphics/android/src/main/java/com/clodhub/cards/PlayingCard.kt`
 - `implementation/apple/Sources/CardModel.swift` -> `components/card-graphics/apple/Sources/CardModel.swift`
 - `implementation/apple/Sources/PlayingCard.swift` -> `components/card-graphics/apple/Sources/PlayingCard.swift`
 - `implementation/web/card-model.ts` -> `components/card-graphics/web/card-model.ts`
@@ -27,10 +27,10 @@ Dependencies: none.
 `tools.lock.json` pins verification tools: node 26.5, python3 3.12, swiftc 6.4, xcrun 72, kotlinc 2.2, java 26.0. Licence wording remains deferred.
 
 ## Provided interfaces
-- `interfaces/card-graphics.json` defines `card-graphics` (ae/card-graphics) version 1.0.0 as an OpenRPC 1.3.2 document: one method per web function, each description naming the Swift and Kotlin form or saying it is web only, with card codes, settings, face models, deal steps and pip layout as JSON Schema 2020-12 under `components.schemas`. Picture lookups, rank labels and DOM elements are described as host values, not serialised.
+- `interfaces/card-graphics.json` defines `card-graphics` (com.clodhub/card-graphics) version 1.0.0 as an OpenRPC 1.3.2 document: one method per web function, each description naming the Swift and Kotlin form or saying it is web only, with card codes, settings, face models, deal steps and pip layout as JSON Schema 2020-12 under `components.schemas`. Picture lookups, rank labels and DOM elements are described as host values, not serialised.
 
 ## Required interfaces
-- `theme` (ae/theme) version 1.0.0, supplied by the recipe or application. Its interface document is a copy of the theme component's OpenRPC document; card-graphics reads the theme's `--paper`, `--paper-accent`, `--on-primary` and `--primary` CSS variables (web) and `ThemeSet` colours (Swift, Kotlin).
+- `theme` (com.clodhub/theme) version 1.0.0, supplied by the recipe or application. Its interface document is a copy of the theme component's OpenRPC document; card-graphics reads the theme's `--paper`, `--paper-accent`, `--on-primary` and `--primary` CSS variables (web) and `ThemeSet` colours (Swift, Kotlin).
 
 ## Integration
 Web: link `web/cards.css` after the theme's CSS; call `cardEl(code, { settings, width, theme, artFor, rankLabel })` for a face or, with `null`, a back; `cardSlot` for an empty place; `dealPlan` or `dealRounds` to schedule a deal and `dealInto` to animate one card from the deck's offset; `flippingCard(from, to)` for a turn. Pass `artFor` to say where artwork files are (`card-back-<theme>.png`, `card-<theme>-jack|queen|king.png`) or omit it to draw everything in code. Apple: compile `CardModel.swift` anywhere and `PlayingCard.swift` in UIKit targets with the theme's Swift files; set `.cardStyle(CardStyle(...))` once; use `PlayingCard`, `CardSlot`, `DealtCard`, `FlippingCard`. Android: add `CardModel.kt` and `PlayingCard.kt` to a Compose module with the theme's Kotlin files; provide `LocalCardStyle`. Which cards exist, who holds them, the logo, hand underlines, the possible-hands panel and showdown layouts stay in the recipe.

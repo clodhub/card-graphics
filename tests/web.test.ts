@@ -180,7 +180,7 @@ test("a consumer draws a hand with French ranks and empty slots", () => {
 test("the OpenRPC interface describes card codes, settings and the exported functions", async () => {
   const doc = JSON.parse(readFileSync(new URL("../interfaces/card-graphics.json", import.meta.url), "utf8"));
   assert.equal(doc.openrpc, "1.3.2");
-  assert.deepEqual([doc.info.title, doc.info.version], ["ae/card-graphics", "1.0.0"]);
+  assert.deepEqual([doc.info.title, doc.info.version], ["com.clodhub/card-graphics", "1.0.0"]);
   const { CardCode, CardSettings, PipLayout, FaceModel } = doc.components.schemas;
   const code = new RegExp(CardCode.pattern);
   for (const c of allCards()) assert.match(c, code);

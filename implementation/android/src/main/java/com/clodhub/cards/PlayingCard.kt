@@ -1,8 +1,8 @@
-package ae.cards
+package com.clodhub.cards
 
-import ae.theme.ComposeColours
-import ae.theme.ThemeSet
-import ae.theme.composeColours
+import com.clodhub.theme.ComposeColours
+import com.clodhub.theme.ThemeSet
+import com.clodhub.theme.composeColours
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.animateFloat
